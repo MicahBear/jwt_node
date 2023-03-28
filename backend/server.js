@@ -6,8 +6,8 @@ const taskRoutes = require('./routes/task')
 const PORT = process.env.PORT || 8000
 const app = express()
 
-app.use('/task', taskRoutes)
 app.use('/', mainRoutes)
+app.use('/task', taskRoutes)
 // app.use('/userAuth', userAuth)
 
 app.listen(PORT, () => {
