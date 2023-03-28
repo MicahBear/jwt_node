@@ -1,11 +1,13 @@
 const express = require('express');
-const app = express()
-const port = process.env.PORT || 8000
 const dotenv = require('dotenv').config()
-app.get('/', (req, res) => {
-    res.send('hello world')
-})
+const mainRoutes = require('./routes/main');
+const userAuth = require('./routes/userAuth')
+const PORT = process.env.PORT || 8000
+const app = express()
 
-app.listen(port, () => {
-    console.log(`listening on port ${port} `)
+app.use('/', mainRoutes)
+// app.use('/userAuth', userAuth)
+
+app.listen(PORT, () => {
+    console.log(`listening on port ${PORT} `)
 })
