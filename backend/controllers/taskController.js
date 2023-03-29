@@ -26,7 +26,9 @@ module.exports = {
             throw new Error('Task not found')
         }
 
-        const updatedTask = await Task.findByIdandUpdate(req.params.id, req.body, { new: true, })
+        const updatedTask = await Task.findByIdAndUpdate(
+            req.params.id, req.body, { new: true, }
+        )
 
         res.status(200).json(updatedTask)
     }),
@@ -37,7 +39,7 @@ module.exports = {
             res.status(400)
             throw new Error('Task no found: no deletion')
         }
-        await task.remove()
+        await task.deleteOne()
 
         res.status(200).json({ id: req.params.id })
     })
