@@ -19,9 +19,26 @@ module.exports = {
         res.status(200).json(task)
     }),
     putTask: asyncHandler(async (req, res) => {
-        res.send('update task')
+        const task = await Task.findById(req.params.id)
+
+        if (!task) {
+            res.status(400)
+            throw new Error('Task not found')
+        }
+
+        const updatedTask = await Task.findByIdandUpdate(req.params.id, req.body, { new: true, })
+
+        res.status(200).json(updatedTask)
     }),
     deleteTask: asyncHandler(async (req, res) => {
-        res.send('delete task')
+        const task = await Task.findById(req.params.id)
+
+        if (!task) {
+            res.status(400)
+            throw new Error('Task no found: no deletion')
+        }
+        await task.remove()
+
+        res.status(200).json({ id: req.params.id })
     })
 }
