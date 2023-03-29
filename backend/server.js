@@ -2,14 +2,18 @@ const express = require('express')
 const dotenv = require('dotenv').config()
 const logger = require('morgan')
 const { errorHandler } = require('./middleware/errorHandler')
+const connectDb = require('./config/connectDb')
 const cookieParser = require('cookie-parser')
 const cors = require('cors')
 const mainRoutes = require('./routes/main')
 const taskRoutes = require('./routes/task')
 // const userAuth = require('./routes/userAuth')
-const PORT = process.env.PORT || 8000
-const app = express()
 
+const PORT = process.env.PORT || 8000
+
+connectDb()
+
+const app = express()
 
 // Logging
 app.use(logger("dev"));
