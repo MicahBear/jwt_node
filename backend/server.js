@@ -10,12 +10,14 @@ const taskRoutes = require('./routes/task')
 const PORT = process.env.PORT || 8000
 const app = express()
 
+
 // Logging
 app.use(logger("dev"));
 app.use(cors())
 
 // Parsing
 app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 
 // Routes

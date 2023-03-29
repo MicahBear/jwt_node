@@ -1,14 +1,16 @@
+const asyncHandler = require('express-async-handler')
+
 module.exports = {
-    getTasks: (req, res) => {
+    getTasks: asyncHandler(async (req, res) => {
         res.send('grab tasks')
-    },
-    postTask: (req, res) => {
+    }),
+    postTask: asyncHandler(async (req, res) => {
         res.send('create task')
-    },
-    putTask: (req, res) => {
+    }),
+    putTask: asyncHandler(async (req, res) => {
         res.send('update task')
-    },
-    deleteTask: (req, res) => {
+    }),
+    deleteTask: asyncHandler(async (req, res) => {
         res.send('delete task')
-    }
+    })
 }
