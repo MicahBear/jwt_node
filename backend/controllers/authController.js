@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken')
 // @access Public
 
 const login = async (req, res) => {
-    const { username, passwoord } = req.body
+    const { username, password } = req.body
 
     if (!username || !password) {
         return res.status(400).json({ mssg: ' all fields required ' })
