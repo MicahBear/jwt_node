@@ -27,7 +27,7 @@ app.use(cookieParser())
 // Routes
 app.use('/', mainRoutes)
 app.use('/task', taskRoutes)
-app.use('/userAuth', user)
+app.use('/user', user)
 
 app.use(errorHandler)
 
