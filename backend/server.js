@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser')
 const cors = require('cors')
 const mainRoutes = require('./routes/main')
 const taskRoutes = require('./routes/task')
-// const userAuth = require('./routes/userAuth')
+const user = require('./routes/user')
 
 const PORT = process.env.PORT || 8000
 
@@ -27,7 +27,7 @@ app.use(cookieParser())
 // Routes
 app.use('/', mainRoutes)
 app.use('/task', taskRoutes)
-// app.use('/userAuth', userAuth)
+app.use('/userAuth', user)
 
 app.use(errorHandler)
 
