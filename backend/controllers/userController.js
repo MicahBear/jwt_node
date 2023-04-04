@@ -1,5 +1,6 @@
 const asyncHandler = require('express-async-handler')
 const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 const User = require('../models/userModel')
 
 const getAllUsers = asyncHandler(async (req, res) => {
@@ -9,6 +10,10 @@ const getAllUsers = asyncHandler(async (req, res) => {
     }
     res.json(users)
 })
+
+// @desc    Create new user
+// @route   POST /user
+// @access  Public
 const createNewUser = asyncHandler(async (req, res) => {
     const { username, password, roles } = req.body
 
