@@ -1,4 +1,4 @@
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
 import Login from './pages/Login'
 import Register from './pages/Register'
@@ -12,8 +12,10 @@ function App() {
     <div className='container'>
       <Header/>
       <Routes>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/Register' element={<Register/>}/>
+        <Route path='/' element={<Layout/>}> 
+         <Route path='/login' element={<Login/>}/>
+         <Route path='/Register' element={<Register/>}/>
+        </Route>
       </Routes>
     </div>
     </Router>
