@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const Public = () => {
     const content = (
-        <section>
+        <section className='public'>
             <header>
                 <h1>Welcome to <span className='nowrap'>Tech Requests</span></h1>
             </header>
