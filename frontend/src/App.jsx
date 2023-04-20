@@ -18,15 +18,17 @@ function App() {
       <Header/>
       <Routes>
         <Route path='/' element={<Layout/>}> 
+         {/** public routes */}
          <Route index element={<Public/>}/> 
          <Route path='login' element={<Login/>}/>
+         {/** protected routes - authentication */}
          <Route path='dash' element={<EmpDashPage/>}>
           <Route index element={<Welcome/>} />
-          
           <Route path ='tasks'>
             <Route index element = {<TasksList />} />
           </Route>
 
+          {/** require authorizaiton */}
           <Route path ='users'>
             <Route index element = {<UsersList />} />
           </Route>
