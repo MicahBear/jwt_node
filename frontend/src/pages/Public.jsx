@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom'
+import Header from '../components/Header'
 
 const Public = () => {
     const content = (
+        <>
+        <Header/>
         <section className='public'>
             <header>
                 <h1>Welcome to <span className='nowrap'>Tech Requests</span></h1>
@@ -14,6 +17,7 @@ const Public = () => {
                 <Link to='/login'>Employee Login</Link>
             </footer>
         </section>
+        </>
     )
     return content
 }
