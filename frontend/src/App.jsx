@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom'
-import Header from './components/Header'
 import Layout from './components/Layout'
 import Login from './features/auth/Login'
 import Welcome from './features/auth/Welcome'
@@ -15,7 +14,6 @@ function App() {
   return (
     <>
     <div className='container'>
-      <Header/>
       <Routes>
         <Route path='/' element={<Layout/>}> 
          {/** public routes */}
