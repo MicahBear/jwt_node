@@ -5,7 +5,7 @@ const EmpDashHeader = () => {
     <header className='dash-header'>
         <div className="dash-header__container">
             <Link to ='/dash/tasks'>
-              <h1 className="dash-header__title">Employee Tasks</h1>
+              <h1 className="dash-header__title">Employee Dashboard</h1>
             </Link>
         </div>
         <nav className="dash-header__nav">
