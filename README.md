@@ -8,4 +8,4 @@ Creating employee task and note tracker for business owner, tasks are created ca
 
 
 ## Tech Stack
-React / Redux / NodeJs / Express / JWT / MongoDb / Mongoose 
+React / Redux / React Router / NodeJs / Express / JWT / MongoDb / Mongoose 
