@@ -19,13 +19,14 @@ function App() {
     <div className='container'>
       <Routes>
         <Route path='/' element={<Layout/>}> 
+     
          {/** public routes */}
          <Route index element={<Public/>}/> 
          <Route path='login' element={<Login/>}/>
         </Route>
-         {/** protected routes - authentication */}
 
-        <Route path='/dash' element={<EmpLayout/>}>
+         {/** protected routes - authentication */}
+        <Route path='/dash' element={<EmpLayout/>}>  {/** emp. dash for emp. routes */}
             <Route index element={<Welcome/>} />
             <Route path ='tasks'>
             <Route index element = {<TasksPage />} />
