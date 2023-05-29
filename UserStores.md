@@ -5,3 +5,4 @@
 - check status
 - remove employee access by setting to inactive
 - testing
+- pricing
