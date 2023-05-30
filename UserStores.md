@@ -6,3 +6,5 @@
 - remove employee access by setting to inactive
 - testing
 - Pricing per ticket based on task
+- Employee : notes
+- Employee : Communicate status and progress
